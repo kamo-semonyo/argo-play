@@ -7,13 +7,17 @@ spec:
     namespace: grafana
     server: https://kubernetes.default.svc
   project: default
-  source:
-    path: charts/tempo
-    repoURL: https://github.com/grafana/helm-charts.git
-    targetRevision: main
   syncPolicy:
     automated:
       selfHeal: true
-  parameters:
-    - name: valuesFile
-      value: values.yaml
+  sources:
+  - repoURL: https://grafana.github.io/helm-charts
+    chart: tempo
+    targetRevision: 1.*
+    helm:
+      valueFiles:
+      - $values/values.yaml
+  - repoURL: 'https://github.com/kamo-semonyo/argo-play.git'
+    targetRevision: main
+    # path: values.yaml
+    ref: values
