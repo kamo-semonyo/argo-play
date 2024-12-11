@@ -26,6 +26,10 @@ auth_enabled: false
 
 minio:
   enabled: true
+  serviceAccount:
+    create: true
+    # set custom service account name to avoid mimir service account duplication
+    name: "loki-minio-sa"
       
 deploymentMode: SingleBinary
 
