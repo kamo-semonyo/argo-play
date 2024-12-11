@@ -22,6 +22,8 @@ loki:
   ruler:
     enable_api: true
 
+auth_enabled: false 
+
 minio:
   enabled: true
       
@@ -29,6 +31,11 @@ deploymentMode: SingleBinary
 
 singleBinary:
   replicas: 1
+
+chunksCache:
+  # default memory is 8192Mi
+  allocatedMemory: 1024
+
 
 # Zero out replica counts of other deployment modes
 backend:
