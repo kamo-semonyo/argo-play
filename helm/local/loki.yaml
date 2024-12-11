@@ -32,8 +32,8 @@ loki:
       ruler: loki
       admin: loki
     s3:
-      s3: "http://minio:minio123@minio.default.svc.cluster.local:9000"
-      endpoint: http://minio.default.svc.cluster.local:9000
+      s3: "http://minio:minio123@{{ .Release.name }}-minio.{{ .Release.namespace }}.svc.cluster.local:9000"
+      endpoint: http://{{ .Release.name }}-minio.{{ .Release.namespace }}.svc.cluster.local:9000
       s3ForcePathStyle: true
       access_key_id: "minio"
       secret_access_key: "minio123"
