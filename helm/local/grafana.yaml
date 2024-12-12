@@ -8,15 +8,15 @@ datasources:
     - name: Loki
       type: loki
       access: proxy
-      url: http://loki-read.{{ .Release.namespace }}.svc.cluster.local:3100
+      url: http://loki-read.grafana.svc.cluster.local:3100
     - name: prometheus
       type: prometheus
       access: proxy
-      url: http://prometheus-server.{{ .Release.namespace }}.svc.cluster.local:80
+      url: http://prometheus-server.grafana.svc.cluster.local:80
     - name: tempo
       type: tempo
       access: proxy
-      url: http://tempo.{{ .Release.namespace }}.svc.cluster.local:3100
+      url: http://tempo.grafana.svc.cluster.local:3100
 
 adminUser: admin
 adminPassword: strongpassword123
