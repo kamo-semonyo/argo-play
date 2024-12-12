@@ -36,8 +36,8 @@ dashboardProviders:
 
 dashboards:
   default:
-    kube-metrics:
-      gnetId: 6417
+    kube-namespace:
+      gnetId: 15758
       datasource: Prometheus
       revision: 1
 #  prometheus-stats:
