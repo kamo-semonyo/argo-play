@@ -6,15 +6,15 @@ datasources:
    apiVersion: 1
    datasources:
     - name: Loki
-      type: Loki
+      type: loki
       access: proxy
       url: http://loki-read.grafana.svc.cluster.local:3100
     - name: Prometheus
-      type: Prometheus
+      type: prometheus
       access: proxy
       url: http://prometheus-server.grafana.svc.cluster.local:80
     - name: Tempo
-      type: Tempo
+      type: tempo
       access: proxy
       url: http://tempo.grafana.svc.cluster.local:3100
 
