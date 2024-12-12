@@ -1,0 +1,2 @@
+clients:
+    - url: http://loki-gateway.{{ .Release.namespace }}.svc.cluster.local/loki/api/v1/push
