@@ -28,9 +28,13 @@ loki:
     delete_request_store: s3
   storage:
     bucketNames:
-      chunks: loki
-      ruler: loki
-      admin: loki
+      - name: chunks
+        purge: true
+      - name: ruler
+        purge: true
+      - name: admin
+        purge: true
+
     s3:
       s3: "http://minio:minio123@{{ .Release.name }}-minio.{{ .Release.namespace }}.svc.cluster.local:9000"
       endpoint: http://{{ .Release.name }}-minio.{{ .Release.namespace }}.svc.cluster.local:9000
