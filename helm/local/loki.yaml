@@ -24,8 +24,7 @@ loki:
     volume_enabled: true
     retention_period: 672h
   compactor:
-    retention_enabled: true 
-    delete_request_store: s3
+    retention_enabled: false 
   storage:
     bucketNames:
       - name: chunks
