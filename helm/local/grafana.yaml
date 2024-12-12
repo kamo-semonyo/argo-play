@@ -20,3 +20,42 @@ datasources:
 
 adminUser: admin
 adminPassword: strongpassword123
+
+dashboardProviders:
+ dashboardproviders.yaml:
+   apiVersion: 1
+   providers:
+   - name: 'default'
+     orgId: 1
+     folder: ''
+     type: file
+     disableDeletion: false
+     editable: true
+     options:
+       path: /var/lib/grafana/dashboards
+
+dashboards:
+ prometheus-stats:
+   gnetId: 2
+   revision: 2
+   datasource: prometheus
+ kubernetes-cluster-monitoring:
+   gnetId: 1621
+   revision: 1
+   datasource: prometheus
+ kubernetes-resource-requests:
+   gnetId: 7187
+   revision: 1
+   datasource: prometheus
+ kubernetes-capacity:
+   gnetId: 5309
+   revision: 1
+   datasource: prometheus
+ kubernetes-pods:
+   gnetId: 6336
+   revision: 1
+   datasource: Prometheus
+ kubernetes-cluster:
+   gnetId: 6417
+   revision: 1
+   datasource: prometheus
