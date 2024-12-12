@@ -1,4 +1,22 @@
 persistence:
   type: pvc
   enabled: true
-  # storageClassName: default
+datasources: 
+ datasources.yaml:
+   apiVersion: 1
+   datasources:
+    - name: Loki
+      type: loki
+      access: proxy
+      url: http://loki-read.{{ .Release.namespace }}.svc.cluster.local:3100
+    - name: prometheus
+      type: prometheus
+      access: proxy
+      url: http://prometheus-server.{{ .Release.namespace }}.svc.cluster.local:80
+    - name: tempo
+      type: tempo
+      access: proxy
+      url: http://tempo.{{ .Release.namespace }}.svc.cluster.local:3100
+
+adminUser: admin
+adminPassword: strongpassword123
