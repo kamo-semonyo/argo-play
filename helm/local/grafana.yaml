@@ -40,6 +40,10 @@ dashboards:
       gnetId: 15758
       datasource: Prometheus
       revision: 1
+    loki-logs:
+      gnetId: 16976
+      datasource: Loki
+      revision: 1
 #  prometheus-stats:
 #    gnetId: 2
 #    revision: 2
