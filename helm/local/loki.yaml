@@ -58,6 +58,8 @@ deploymentMode: SimpleScalable
 backend:
   # default is 2
   replicas: 1
+  persistence:
+    enableStatefulSetAutoDeletePVC: true
   affinity:
     # prevents the same pod deployment on the same node
     podAntiAffinity:
@@ -69,6 +71,8 @@ backend:
 read:
   # at least 2 replicase are required
   replicas: 2
+  persistence:
+    enableStatefulSetAutoDeletePVC: true
   affinity:
     # prevents the same pod deployment on the same node
     podAntiAffinity:
@@ -80,6 +84,8 @@ read:
 write:
   # default is 2 replicas
   replicas: 2
+  persistence:
+    enableStatefulSetAutoDeletePVC: true
   affinity:
     # prevents the same pod deployment on the same node
     podAntiAffinity:
