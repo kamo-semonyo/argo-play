@@ -4,3 +4,10 @@ traces:
       enabled: true
     http:
       enabled: true
+
+metrics_generator:
+  processors:
+    service_graphs:
+      enable_client_server_prefix: true
+    span_metrics:
+      enable_target_info: true
