@@ -42,7 +42,7 @@ dashboardProviders:
 dashboards:
   default:
     kube-namespace:
-      gnetId: 15758
+      gnetId: 15757
       datasource: Prometheus
       revision: 1
     node-exporter:
