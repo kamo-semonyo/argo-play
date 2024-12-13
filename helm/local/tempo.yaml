@@ -1,3 +1,9 @@
+tempo:
+  metricsGenerator:
+    # -- If true, enables Tempo's metrics generator (https://grafana.com/docs/tempo/next/metrics-generator/)
+    enabled: false
+    remoteWriteUrl: "http://prometheus-prometheus-pushgateway.grafana.svc.cluster.local:9090/api/v1/write"
+
 traces:
   otlp:
     grpc:
