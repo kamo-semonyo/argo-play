@@ -6,8 +6,17 @@ traces:
       enabled: true
 
 metrics_generator:
-  processors:
+  processor:
     service_graphs:
-      enable_client_server_prefix: true
+      enable_virtual_node_label: true
     span_metrics:
-      enable_target_info: true
+      filter_policies:
+        - include:
+            match_type: strict
+            attributes:
+              - key: kind
+                value: SPAN_KIND_SERVER
+
+  storage:
+    remote_write:
+      url: http://prometheus-prometheus-pushgateway.grafana.svc.cluster.local:9091
