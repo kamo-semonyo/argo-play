@@ -44,7 +44,7 @@ dashboards:
     kube-namespace:
       gnetId: 15758
       datasource: Prometheus
-      revision: 41
+      revision: 36
     node-exporter:
       gnetId: 11074
       datasource: Prometheus
