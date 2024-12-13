@@ -20,9 +20,12 @@ datasources:
       jsonData:
         tracesToLogsV2:
           datasourceUid: 'Loki'
-          tags: ['job', 'instance', 'pod', 'namespace']
+          tags:
+            - service.name: server
         tracesToMetrics:
           datasourceUid: 'Prometheus'
+          tags:
+            - service.name: server
 
 adminUser: admin
 adminPassword: strongpassword123
