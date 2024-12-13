@@ -44,15 +44,11 @@ dashboards:
     kube-namespace:
       gnetId: 15758
       datasource: Prometheus
-      revision: 1
-    loki-logs:
-      gnetId: 15141
-      datasource: Loki
-      revision: 1
-    http-services:
-      gnetId: 21587
-      datasource: Tempo
-      revision: 1
+      revision: 41
+    node-exporter:
+      gnetId: 11074
+      datasource: Prometheus
+      revision: 9
 #  prometheus-stats:
 #    gnetId: 2
 #    revision: 2
