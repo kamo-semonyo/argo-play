@@ -46,12 +46,12 @@ dashboards:
       datasource: Prometheus
       revision: 1
     loki-logs:
-      gnetId: 16976
+      gnetId: 15141
       datasource: Loki
       revision: 1
     http-services:
       gnetId: 21587
-      datasource: LokiPrometheusTempo
+      datasource: Tempo
       revision: 1
 #  prometheus-stats:
 #    gnetId: 2
