@@ -21,11 +21,11 @@ datasources:
         tracesToLogsV2:
           datasourceUid: 'Loki'
           tags:
-            - service.name: server
+            - 'service.name': 'server'
         tracesToMetrics:
           datasourceUid: 'Prometheus'
           tags:
-            - service.name: server
+            - 'service.name': 'server'
 
 adminUser: admin
 adminPassword: strongpassword123
