@@ -17,6 +17,12 @@ datasources:
       type: tempo
       access: proxy
       url: http://tempo.grafana.svc.cluster.local:3100
+      jsonData:
+        tracesToLogsV2:
+          datasourceUid: 'Loki'
+          tags: ['job', 'instance', 'pod', 'namespace']
+        tracesToMetrics:
+          datasourceUid: 'Prometheus'
 
 adminUser: admin
 adminPassword: strongpassword123
